@@ -1,16 +1,539 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html>
-  <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <link rel="stylesheet" type="text/css" media="screen" href="screen.css">
-    <title>Xueying Li - Introduction</title>
-  </head>
-  <body>
-    <!-- header BEGIN -->
-    <div id="header">
-      <h1><em>Xueying Li</em></h1>
-      <p><em>Who am I? What am I doing?</em></p>
-    </div>
-    <!-- header END -->
+<!doctype html>
+<!--[if IE 7 ]>    <html lang="en-gb" class="isie ie7 oldie no-js"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="en-gb" class="isie ie8 oldie no-js"> <![endif]-->
+<!--[if IE 9 ]>    <html lang="en-gb" class="isie ie9 no-js"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html lang="en-gb" class="no-js"> <!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <!--[if lt IE 9]> 
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <![endif]-->	
+	<title>XFlow Lab - porousRTFoam</title>	
+	<meta name="description" content="">
+	<meta name="Xueying Li" content="webpage">    
+    <!--[if lt IE 9]>
+        <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->     
+<link rel="stylesheet" href="css/bootstrap.min.css" />     
+<link rel="stylesheet" type="text/css" href="css/isotope.css" media="screen" />	
+<link rel="stylesheet" href="js/fancybox/jquery.fancybox.css" type="text/css" media="screen" />
+<link rel="stylesheet" type="text/css" href="css/da-slider.css" />
+<link rel="stylesheet" href="css/styles.css"/>
+<!-- Font Awesome -->
+<link href="font/css/font-awesome.min.css" rel="stylesheet">
+</head>
 
+<body>
+<header class="header">
+	<div class="container">
+		<nav class="navbar navbar-inverse" role="navigation">
+        	<div class="navbar-header">
+	            <button type="button" id="nav-toggle" class="navbar-toggle" data-toggle="collapse" data-target="#main-nav">
+		            <span class="sr-only">Toggle navigation</span>
+		            <span class="icon-bar"></span>
+		            <span class="icon-bar"></span>
+		            <span class="icon-bar"></span>
+	            </button>
+	            <a href="#" class="navbar-brand scroll-top logo"><b>porousRT</b>Foam</a>
+        	</div>
+        	<!--/.navbar-header-->
+	        <div id="main-nav" class="collapse navbar-collapse">
+	            <ul class="nav navbar-nav" id="mainNav">
+		            <li class="active"><a href="#home" class="scroll-link">Home</a></li>
+					<li><a href="#aboutporousRTFoam" class="scroll-link">About porousRTFoam</a></li>
+					<li><a href="#solvers" class="scroll-link">Solvers</a></li>
+					<li><a href="#simulation" class="scroll-link">Simulation</a></li>
+					<li><a href="#team" class="scroll-link">XFlow Lab</a></li>
+					<li><a href="#contactUs" class="scroll-link">Contact Us</a></li> 
+	            </ul>
+	        </div>
+	        <!--/.navbar-collapse-->
+	    </nav>
+	    <!--/.navbar-->
+	</div>
+	<!--/.container-->
+</header>
+<!--/.header-->
+<div id="#top"></div>
+<section id="home" class="page-section">
+    <div class="banner-container">
+        <div class="bannerOverlay"></div>
+            <div class="container banner-content">
+		    <<!--h1>Responsive Page Scrolling<br/><span>with Bootstrap</span></h1>
+		    <p class="lead">Use the navigation above to scroll to different page sections.</p>		   
+		    <p><a href="#about" class="button-outline"> More.. </a></p>-->
+               <div id="da-slider" class="da-slider">
+				<div class="da-slide">
+					<h2>dbsFoam</h2>
+					<p>Flow transport in porous media</p>
+					<a href="#" class="da-link button-outline">Read more</a>
+					<div class="da-img"></div>
+				</div>
+				<div class="da-slide">
+					<h2>dbscFoam</h2>
+					<p>Solute transport in porous media</p>
+					<a href="#" class="da-link button-outline">Read more</a>
+					<div class="da-img"></div>
+				</div>
+				<div class="da-slide">
+					<h2>dissolutionFoam</h2>
+					<p>Coupled reactive transport of calcite carbonate dissolution</p>
+					<a href="#" class="da-link button-outline">Read more</a>
+					<div class="da-img"></div>
+				</div>
+				<div class="da-slide">
+					<h2>precipitationFoam</h2>
+					<p>Coupled reactive transport of calcite carbonate precipitation</p>
+					<a href="#" class="da-link button-outline">Read more</a>
+					<div class="da-img"></div>
+				</div>
+				<div class="da-slide">
+					<h2>bioFoam</h2>
+					<p>Coupled reactive transport of biofilm growth</p>
+					<a href="#" class="da-link button-outline">Read more</a>
+					<div class="da-img"></div>
+				</div>
+				<div class="da-slide">
+					<h2>micpFoam</h2>
+					<p>Coupled reactive transport of microbially induced calcite carbonate precipitation</p>
+					<a href="#" class="da-link button-outline">Read more</a>
+					<div class="da-img"></div>
+				</div>
+				<nav class="da-arrows">
+					<span class="da-arrows-prev"></span>
+					<span class="da-arrows-next"></span>
+				</nav>
+			</div>
+	    </div>
+    </div>		
+	<section class="sub-heading">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+			  <h2>What is <b>porousRTFoam</b></a>?</h2>
+			<p><b>porousRTFoam</b></a> is a package for solving coupled reactive transport processes in porous media using <b>OpenFOAM®</b>, a popular open-source software for CFD simulation. We implement the micro-continuum approach, which enable the investigation of coupled biogeochemical processes occurring at both pore scale and Darcy scale. This package is able to record porosity evolution during reactive transport in porous media, including flow and solute transport, mineral dissolution and precipitation, biofilm growth and bioclogging, and microbially induced calcite carbonate precipitation. <b>porousRTFoam</b></a> facilitates the coupling of biogeochemical properties in typical porous and fractured media, offering a wide range of application opportunities from CCUS to contaminant remediation.</p>
+          </div>
+        </div>
+      </div><!-- END container -->
+    </section>
+    <!--/.container-->
+</section> 
+
+<section id="aboutporousRTFoam" class="page-section darkBg pDark pdingBtm30">
+	<div class="container">
+							    <div class="heading text-center">
+								<!-- Heading -->
+								<h2>About porousRTFoam</h2>								 
+								<p>The governing equations of porousRTFoam is based on the Darcy-Brinkman-Stokes equation.</p>
+							</div>
+							
+								<div class="row">
+									<div class="col-md-4 col-sm-4">										
+											<h3><i class="fa fa-bullseye color"></i> &nbsp; Flow Transport</h3>
+											<!-- Image Hover Block -->
+											<div class="member-img">
+												<!-- Image  -->
+												<img class="img-responsive" src="images/DBSEq.png" alt=""> 
+											</div>
+																				
+									</div>
+									<div class="col-md-4 col-sm-4">										
+											<!-- Heading -->
+											<h3><i class="fa fa-bullseye color"></i> &nbsp;Solute Transport</h3>
+											 <!-- Image Hover Block -->
+											<div class="member-img">
+												<!-- Image  -->
+												<img class="img-responsive" src="images/ADE.png" alt=""> 
+											</div>										
+									</div>
+									<div class="col-md-4 col-sm-4">										
+											<!-- Heading -->
+											<h3><i class="fa fa-bullseye color"></i> &nbsp;Source Term</h3>
+											 <!-- Image Hover Block -->
+											<div class="member-img">
+												<!-- Image  -->
+												<img class="img-responsive" src="images/source.png" alt=""> 
+											</div>										
+									</div>
+								</div>
+							</div>
+	<!--/.container-->
+</section> 
+
+<section id="solvers" class="page-section">
+	<div class="container">
+		    <div class="heading text-center">
+								<!-- Heading -->
+								<h2>Solvers</h2>								
+								<p>The porousRTFoam is consist of dbsFoam, dbscFoam, dissolutionFoam, precipitationFoam, bioFoam, and micpFoam.</p>
+							</div>
+		<section class="grid row clearfix clearfix-for-2cols">
+
+                  <!-- grid item -->
+                  <div class="grid-item col-md-6">
+                    <div class="item-content clearfix">
+						<img src="images/logo.png" alt="Logo" style="width: 50px; height: auto;"> <!-- add logo -->
+                      <div class="text-content">
+						  <h4>dbsFoam</h4>
+                        <p>The solver is developed to solve porous media flow using the Darcy-Brinkman-Stokes equation.</p>
+                      </div>
+                    </div><!-- end: .item-content -->
+                  </div><!-- end: .grid-item -->
+
+                  <!-- grid item -->
+                  <div class="grid-item col-md-6">
+                    <div class="item-content clearfix">
+                      <img src="images/logo.png" alt="Logo" style="width: 50px; height: auto;"> <!-- add logo -->
+                      <div class="text-content">
+                        <h4>dbscFoam</h4>
+                        <p>The solver is developed to solve solute transport in porous media using the Darcy-Brinkman-Stokes equation and the Advection-Diffusion equation.</p>
+                      </div>
+                    </div><!-- end: .item-content -->
+                  </div><article class="clearfix"></article><!-- end: .grid-item -->
+
+				  <!-- grid item -->
+                  <div class="grid-item col-md-6">
+                    <div class="item-content clearfix">  
+                        <img src="images/logo.png" alt="Logo" style="width: 50px; height: auto;"> <!-- add logo -->
+                      <div class="text-content">
+                        <h4>dissolutionFoam</h4>
+						<p>The solver is developed to solve the coupled process of calcite carbonate dissolution and solute transport in porous media using the Darcy-Brinkman-Stokes equation.</p>
+                      </div>
+                    </div><!-- end: .item-content -->
+                  </div><!-- end: .grid-item -->
+
+                  <!-- grid item -->
+                  <div class="grid-item col-md-6">
+                    <div class="item-content clearfix">  
+                        <img src="images/logo.png" alt="Logo" style="width: 50px; height: auto;"> <!-- add logo -->
+                      <div class="text-content">
+                        <h4>precipitationFoam</h4>
+                        <p>The solver is developed to solve the coupled process of calcite carbonate precipitation and solute transport in porous media using the Darcy-Brinkman-Stokes equation.</p>
+                      </div>
+                    </div><!-- end: .item-content -->
+                  </div><!-- end: .grid-item -->
+
+                  <!-- grid item -->
+                  <div class="grid-item col-md-6">
+                    <div class="item-content clearfix">
+                      <img src="images/logo.png" alt="Logo" style="width: 50px; height: auto;"> <!-- add logo -->
+                      <div class="text-content">
+                        <h4>bioFoam</h4>
+                        <p>The solver is developed to solve the coupled process of biofilm growth and solute transport in porous media using the Darcy-Brinkman-Stokes equation and the Monod kinetics.</p>
+                      </div>
+                    </div><!-- end: .item-content -->
+                  </div><!-- end: .grid-item -->
+
+				  <!-- grid item -->
+                  <div class="grid-item col-md-6">
+                    <div class="item-content clearfix">
+                      <img src="images/logo.png" alt="Logo" style="width: 50px; height: auto;"> <!-- add logo -->
+                      <div class="text-content">
+                        <h4>micpFoam</h4>
+                        <p>The solver is developed to solve the coupled process of microbially induced calcite carbonate precipitation and solute transport in porous media using the Darcy-Brinkman-Stokes equation and the Michaelis‐Menten kinetics.</p>
+                      </div>
+                    </div><!-- end: .item-content -->
+                  </div><article class="clearfix"></article><!-- end: .grid-item --> 
+				  </section>
+	</div>
+	<!--/.container-->
+</section> 
+
+<section id="simulation" class="page-section section appear clearfix">	
+			<div class="container">
+				
+		    <div class="heading text-center">
+								<!-- Heading -->
+								<h2>Simulation</h2>								
+								
+							</div>
+					
+                        <div class="row"> 
+                          </nav>
+                          <div class="col-md-12">
+                            <div class="row">
+                              
+							  <p></p>
+                                <nav id="filter" class="col-md-12 text-center">
+                            <ul> 
+                              <li ><a href="#" class="btn-theme btn-small" data-filter=".print">dbsFoam</a></li>
+                            </ul>
+								<article class="col-md-4isotopeItem webdesign">
+									<div class="portfolio-item">
+										<video width="800" height="600" controls>
+											<source src="images/img1.mp4" type="video/mp4">
+											Your browser does not support the video tag.
+										</video>
+									</div>
+                                </article>
+
+							<p></p>
+							<nav id="filter" class="col-md-12 text-center">
+                            <ul> 
+                              <li ><a href="#" class="btn-theme btn-small" data-filter=".print">dbscFoam</a></li>
+                            </ul>
+                                <article class="col-md-4isotopeItem photography">
+									<div class="portfolio-item">
+										<video width="800" height="600" controls>
+											<source src="images/img2.mp4" type="video/mp4">
+											Your browser does not support the video tag.
+										</video>
+									</div>
+                                </article>
+							
+							<p></p>
+							<nav id="filter" class="col-md-12 text-center">
+                            <ul> 
+                              <li ><a href="#" class="btn-theme btn-small" data-filter=".print">dissolutionFoam</a></li>
+                            </ul>
+                                <article class="col-md-4isotopeItem photography">
+									<div class="portfolio-item">
+										<p>Copyright: porousMedia4Foam</p>
+										<video width="800" height="600" controls>
+											<source src="images/img3.mp4" type="video/mp4">
+											Your browser does not support the video tag.
+										</video>
+									</div>
+                                </article>
+						
+							<p></p>
+							<nav id="filter" class="col-md-12 text-center">
+                            <ul> 
+                              <li ><a href="#" class="btn-theme btn-small" data-filter=".print">precipitationFoam</a></li>
+                            </ul>
+                                <article class="col-md-4isotopeItem print">
+									<div class="portfolio-item">
+										<video width="800" height="600" controls>
+											<source src="images/img4.mp4" type="video/mp4">
+											Your browser does not support the video tag.
+										</video>
+									</div>
+                                </article>
+							
+							<p></p>
+							<nav id="filter" class="col-md-12 text-center">
+                            <ul> 
+                              <li ><a href="#" class="btn-theme btn-small" data-filter=".print">bioFoam</a></li>
+                            </ul>
+                                <article class="col-md-4isotopeItem photography">
+									<div class="portfolio-item">
+										<video width="800" height="600" controls>
+											<source src="images/img5.mp4" type="video/mp4">
+											Your browser does not support the video tag.
+										</video>
+										 
+									</div>
+                                </article>
+							
+
+							<p></p>
+							<nav id="filter" class="col-md-12 text-center">
+                            <ul> 
+                              <li ><a href="#" class="btn-theme btn-small" data-filter=".print">micpFoam</a></li>
+                            </ul>
+                                <article class="col-md-4isotopeItem webdesign">
+									<div class="portfolio-item">
+										<video width="800" height="600" controls>
+											<source src="images/img6.mp4" type="video/mp4">
+											Your browser does not support the video tag.
+										</video>
+									</div>
+                                </article>  
+							</div>                         
+						  </div>
+                        </div>	
+						<div class="related-work">
+							<b>Related Work</b>
+							<p>[1] Xueying Li, Xiaowei Chen, Yurong Yang, Yongqi Qian, Xiaofan Yang*, “Pore-scale modeling and simulation of biofilm growth in heterogenous porous media” ([Manuscript])</p>
+							<p>[2] Xueying Li, Xiaowei Chen, Yiyang Wu, Xiaofan Yang*, “A Darcy-Brinkman-Stokes Approach to Modeling Microbially Induced Calcium Carbonate Precipitation in Porous and Fractured Media” (Under review at Water Resources Research)</p>
+							<p>[3] Xueying Li, Xiaofan Yang*, A meshing method for complex porous media, Accepted.</p>
+							<p>[4] Xueying Li, Xiaowei Chen, Xiaofan Yang*, A numerical software of biofilm growth, Registration Number: 2023SR1383337, Registration Date: 2023-06-20.</p>
+							<p>[5] Xiaowei Chen, Xueying Li, Xiaofan Yang*, A numerical software of microbially induced calcite carbonate precipitation, Registration Number: 2023SR1386344, Registration Date: 2023-06-29.</p>
+						</div>
+			</div>	
+</section> 
+
+<section id="team" class="page-section">
+	<div class="container">
+							<div class="heading text-center">
+								<!-- Heading -->
+								<h2>XFlow Lab</h2> 
+								
+							</div>
+							<!-- Team Member's Details -->
+							<div class="team-content">
+								<div class="row">
+									<div class="col-md-3 col-sm-6 col-xs-6">
+										<!-- Team Member -->
+										<div class="team-member pDark">
+											<!-- Image Hover Block -->
+											<div class="member-img">
+												<!-- Image  -->
+												<img class="img-responsive" src="images/photo1.jpg" alt=""> 
+											</div>
+											<!-- Member Details -->
+											<h3>Xiaofan Yang</h3>
+											<!-- Designation -->
+											<span class="pos">Team Leader</span>
+                                            <div class="descrition">
+                                                <p>Full time professor at the Faculty of Geographical Science, Beijing Normal University.</p>
+                                                </div>
+										</div>
+									</div>
+									<div class="col-md-3 col-sm-6 col-xs-6">
+										<!-- Team Member -->
+										<div class="team-member pDark">
+											<!-- Image Hover Block -->
+											<div class="member-img">
+												<!-- Image  -->
+												<img class="img-responsive" src="images/photo2.jpg" alt=""> 
+											</div>
+											<!-- Member Details -->
+											<h3>Xueying Li</h3>
+											<!-- Designation -->
+											<span class="pos">Model Developer</span>
+                                            <div class="descrition">
+                                                <p>Ph.D. student in Xiaofan Yang's Lab, the Faculty of Geographical Science.</p>
+                                                </div>
+										</div>
+									</div>
+									<div class="col-md-3 col-sm-6 col-xs-6">
+										<!-- Team Member -->
+										<div class="team-member pDark">
+											<!-- Image Hover Block -->
+											<div class="member-img">
+												<!-- Image  -->
+												<img class="img-responsive" src="images/photo3.jpg" alt=""> 
+											</div>
+											<!-- Member Details -->
+											<h3>Xiaowei Chen</h3>
+											<!-- Designation -->
+											<span class="pos">Model Developer</span>
+                                            <div class="descrition">
+                                                <p>M.S. student in Xiaofan Yang's Lab, the Faculty of Geographical Science.</p>
+                                                </div>
+										</div>
+									</div>
+									<div class="col-md-3 col-sm-6 col-xs-6">
+										<!-- Team Member -->
+										<div class="team-member pDark">
+											<!-- Image Hover Block -->
+											<div class="member-img">
+												<!-- Image  -->
+												<img class="img-responsive" src="images/photo4.jpg" alt=""> 
+											</div>
+											<!-- Member Details -->
+											<h3>Guangrong Hu</h3>
+											<!-- Designation -->
+											<span class="pos">XCT Lab Manager</span>
+                                            <div class="descrition">
+                                                <p>Associate researcher at the State Key Laboratory of Earth Surface Processes and Resource Ecology.</p>
+                                                </div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+	<!--/.container-->
+</section> 
+
+<section id="contactUs" class="page-section">
+	<div class="container">
+    
+		<div class="row">
+                <div class="heading text-center">
+								<!-- Heading -->
+								<h2>Contact Us</h2> 
+							</div>
+						<div class="col-sm-12">
+							
+							</div>
+            </div>
+
+					<div class="row mrgn30">
+                        				<div class="col-sm-4">
+									<h4>Address:</h4>
+									<address>
+										Beijing Normal University<br>
+										Xinjiekouwai Avenue, 19th<br>
+										Haidian District, Beijing, 100875 China <br>
+									</address>
+									<h4>Phone:</h4>
+									<address>
+										86+ 151 1692 3181<br>
+									</address>
+								</div>
+								<form method="post" action="" id="contactfrm" role="form">
+
+									<div class="col-sm-4"> 
+										<div class="form-group">
+											<label for="name">Name</label>
+											<input type="text" class="form-control" name="name" id="name" placeholder="Enter name" title="Please enter your name (at least 2 characters)">
+										</div>
+										<div class="form-group">
+											<label for="email">Email</label>
+											<input type="email" class="form-control" name="email" id="email" placeholder="Enter email" title="Please enter a valid email address">
+										</div>
+										<div class="form-group">
+											<label for="phone">Phone</label>
+											<input name="phone" class="form-control required digits" type="tel" id="phone" size="30" value="" placeholder="Enter email phone" title="Please enter a valid phone number (at least 10 characters)">
+										</div>
+									</div>
+									<div class="col-sm-4">
+										<div class="form-group">
+											<label for="comments">Comments</label>
+											<textarea name="comment" class="form-control" id="comments" cols="3" rows="5" placeholder="Enter your message…" title="Please enter your message (at least 10 characters)"></textarea>
+										</div>	
+										<button name="submit" type="submit" class="btn btn-lg btn-primary" id="submit"> Submit</button>		
+										<div class="result"></div>										
+									</div>                        									
+								</form>
+							</div>
+        </div>
+	<!--/.container-->
+</section>
+<!--/#north-america-->
+
+<footer class="page-section">
+	<div class="container">
+        <div class="row">
+          <div class="col-md-4 col-sm-6 about">
+            
+          </div>
+          
+          <div class="col-md-4 contact">
+            <h4>Contact Info</h4>
+            <p>XFlow Lab aims to develope models on coupled flow and reactive solute transport processes in groundwater systems.</p>
+            <ul>
+              <li><i class="fa fa-phone"></i>(010) 5880 7725</li>
+              <li><a href="#"><i class="fa fa-envelope-o"></i> lixueying@mail.bnu.edu.cn</a></li>
+              <li><i class="fa fa-flag"></i>Xinjiekouwai Avenue 19th , Haidian District, Beijing</li>
+            </ul>
+          </div>
+        </div><!-- END Row -->
+      </div>
+</footer>
+<!--/.page-section-->
+<section class="copyright">
+     <div class="container">
+      <div class="row">
+        <div class="col-sm-12">          
+            Copyright 2014 All Rights Reserved         <div class="pull-right">Template by <a href="http://webThemez.com"> WebThemez.com</a></div>  
+        </div>
+      </div>  <!-- / .row -->
+    </div>
+</section>
+    <a href="#top" class="topHome"><i class="fa fa-chevron-up fa-2x"></i></a>
+
+<!--[if lte IE 8]><script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script><![endif]-->
+<script src="js/modernizr-latest.js"></script>
+<script src="js/jquery-1.8.2.min.js" type="text/javascript"></script>    
+<script src="js/bootstrap.min.js" type="text/javascript"></script>	 
+<script src="js/jquery.isotope.min.js" type="text/javascript"></script>
+<script src="js/fancybox/jquery.fancybox.pack.js" type="text/javascript"></script> 
+<script src="js/jquery.nav.js" type="text/javascript"></script>
+<script src="js/jquery.cslider.js" type="text/javascript"></script>
+<script src="js/custom.js" type="text/javascript"></script>
+</body>
 </html>
